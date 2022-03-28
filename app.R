@@ -2,7 +2,7 @@
 # JFAST Core Mapper
 #
 # AUTHOR: Jenna Everard
-# LAST MODIFIED: March 25, 2022
+# LAST MODIFIED: March 28, 2022
 #
 
 library(shiny)
@@ -106,7 +106,7 @@ server <- function(input, output) {
             geom_errorbar(aes(x = panel1_data$Depth,
                               ymin = panel1_data$Age - panel1_data$Sigma, 
                               ymax = panel1_data$Age + panel1_data$Sigma),
-                          size=0.5, width=0.5) +
+                          size=0.5, width=0.1) +
             ylim(0, max_age) +
             xlim(180, 184) +
             theme(
@@ -137,7 +137,7 @@ server <- function(input, output) {
             geom_errorbar(aes(x = panel2_data$Depth,
                               ymin = panel2_data$Age - panel2_data$Sigma,
                               ymax = panel2_data$Age + panel2_data$Sigma),
-                          size=0.5, width=1) +
+                          size=0.5, width=4) +
             ylim(0, max_age) +
             theme(
                 panel.grid.major = element_blank(),
